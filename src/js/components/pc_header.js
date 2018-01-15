@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row,Col, Menu, Icon,Tabs,Message,Form,Input,Button,CheckBox,Modal,Link } from 'antd';
+import { Row,Col, Menu, Icon,Tabs,message,Form,Input,Button,CheckBox,Modal,Link } from 'antd';
 const FormItem = Form.Item;
 const SubMenu = Menu.SubMenu;
 const TabPane = Tabs.TabPane;
@@ -28,8 +28,25 @@ class PCHeader extends React.Component{
             this.setState({current: e.key});
         }
     };
-    handleSubmit(){
-
+    handleSubmit(e){
+        //页面开始向 API 进行提交数据
+        e.preventDefault();
+        var myFetchOptions = {
+            method: 'GET'
+        }
+        var formData = this.props.form.getFieldsValue();
+        console.log(formData);
+        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=" + this.state.action
+        + "&username="+formData.userName+"&password="+formData.password
+        +"&r_userName=" + formData.r_userName + "&r_password="
+        + formData.r_password + "&r_confirmPassword="
+        + formData.r_confirmPassword, myFetchOptions)
+        .then(response=>response.json())
+        .then(json => {
+            this.setState({userNickName:json.userNickName,userid:json.userid})
+        })
+        message.success("请求成功！");
+        this.setModalVisible(false);
     };
     render(){
         let { getFieldProps } = this.props.form;
@@ -87,7 +104,7 @@ class PCHeader extends React.Component{
                         <Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible} onCancel={() => this.setModalVisible(false)} onOk={() => this.setModalVisible(false)} okText="关闭">
                             <Tabs type="card">
                                 <TabPane tab="注册" key="2">
-                                    <Form horizontal onSubmit={this.handleSubmit.bind(this)}>
+                                    <Form layout="horizontal" onSubmit={this.handleSubmit.bind(this)}>
                                         <FormItem label="账户">
                                             <Input placeholder="请输入你的账号" {...getFieldProps('r_userName')} />
                                         </FormItem>
@@ -100,7 +117,7 @@ class PCHeader extends React.Component{
                                         <Button type="primary"htmlType="submit">注册</Button>
                                     </Form>
                                 </TabPane>
-                                <TabPane tab="登录" key="2">Content of Tab Pane 2</TabPane>
+                                <TabPane tab="登录" key="1">Content of Tab Pane 2</TabPane>
                             </Tabs>
                         </Modal>
                     </Col>

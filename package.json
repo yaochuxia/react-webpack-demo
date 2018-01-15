@@ -1,5 +1,5 @@
 {
-  "name": "ractdemos",
+  "name": "react-webpack-demo",
   "version": "1.0.0",
   "description": "a collection of simple demos of Webpack",
   "main": "root.js",
@@ -8,7 +8,7 @@
     "demo",
     "webpack"
   ],
-  "author": "Ruan Yifeng",
+  "author": "yaochuxia",
   "license": "MIT",
   "dependencies": {
     "antd": "^3.1.1",
