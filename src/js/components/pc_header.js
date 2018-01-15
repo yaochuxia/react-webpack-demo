@@ -82,13 +82,13 @@ class PCHeader extends React.Component {
         let {getFieldProps} = this.props.form;
         const userShow = this.state.hasLogined
             ? <Menu.Item key="logout" className="register">
-                    <Button type="primary" htmlType="button">{this.state.userNickName}</Button>
+                    <Button type="primary" htmlType="button" size='small'>{this.state.userNickName}</Button>
                     &nbsp;&nbsp;
                     <Link target="_blank">
-                        <Button type="dashed" htmlType="button">个人中心</Button>
+                        <Button type="dashed" htmlType="button" size='small'>个人中心</Button>
                     </Link>
                     &nbsp;&nbsp;
-                    <Button type="ghost" htmlType="button" onClick={this.logout.bind(this)}>退出</Button>
+                    <Button type="ghost" htmlType="button" onClick={this.logout.bind(this)} size='small'>退出</Button>
                 </Menu.Item>
             : <Menu.Item key="register" className="register">
                 <Icon type="appstore"/>注册/登录
