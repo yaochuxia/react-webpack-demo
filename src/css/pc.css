@@ -23,21 +23,30 @@
 .container{
     padding-top: 15px;
 }
-.leftContainer, .topNewsList{
-    width: 400px;
+.leftContainer{
+    width: 370px;
     float:left;
     margin-right: 15px;
 }
 .carousel{
-    width: 400px;
+    width: 370px;
     float:left;
 }
 .tabs_news{
-    width: 400px;
+    width: 370px;
+    float: left;
+    margin-right: 15px !important;
 }
 .tabs_news ul{
     padding-left: 0;
     margin-bottom: 0;
+}
+.tabs_news ul li{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+    font-size: 14px;
 }
 .tabs_news ul li a{
     color: #666;
@@ -50,10 +59,9 @@ ul,li{
     list-style: none;
 }
 .topNewsList{
-    width: 400px;
+    width: 370px;
     float:left;
     margin-right: 15px;
-    margin-top: 15px;
 }
 .imageblock {
     float: left;
