@@ -15,7 +15,7 @@ export default class PCNewsContainer extends React.Component{
                         <div className="leftContainer">
                             <Carousel autoplay>
                                 <div><img src="./src/images/carousel_1.jpg" width='400' height='350' /></div>
-                                <div><img src="./src/images/carousel_2.jpg" width='400' height='300' /></div>
+                                <div><img src="./src/images/carousel_2.jpg" width='400' height='350' /></div>
                                 <div><img src="./src/images/carousel_3.jpg" width='400' height='350' /></div>
                                 <div><img src="./src/images/carousel_4.jpg" width='400' height='350' /></div>
                             </Carousel>
@@ -30,6 +30,7 @@ export default class PCNewsContainer extends React.Component{
                             </TabPane>
                         </Tabs> 
                         <PCNewsImageBlock count={6} type="guoji" width="400px" cartTitle="国际头条" imageWidth="112px"/>                   
+                        <PCNewsImageBlock count={6} type="yule" width="400px" cartTitle="娱乐头条" imageWidth="112px"/>                   
                     </Col>
                     <Col span={2}></Col>
                 </Row>

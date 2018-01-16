@@ -25,7 +25,9 @@ export default class PCNewsImageBlock extends React.Component{
             width: this.props.imageWidth,
             whiteSpace: "nowrap",
             overflow: "hidden",
-            textOverflow: "ellipsis"
+            textOverflow: "ellipsis",
+            marginBottom: 0,
+            fontSize: '14px'
         };
         const {news} = this.state;
         const newsList = news.length
