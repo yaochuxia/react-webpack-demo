@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col,Menu,Icon,Tabs,message,Card, Form,Input,Button,CheckBox,Modal} from 'antd';
+import {Row, Col,Menu,Icon,Tabs,message,Card, Form,Input,Button,CheckBox,Modal,notification} from 'antd';
 const FormItem = Form.Item;
 const SubMenu = Menu.SubMenu;
 const TabPane = Tabs.TabPane;
@@ -34,6 +34,17 @@ class CommonComments extends React.Component {
             this.componentDidMount();
         })
     };
+    addUserCollection(e){
+        e.preventDefault();
+        var myFetchOptions = {
+            method: 'GET'
+        };
+        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=uc&userid="+localStorage.userid+"&uniquekey="+this.props.uniquekey,myFetchOptions)
+        .then(response=>response.json())
+        .then(json =>{
+            notification['success']({message: 'ReactNews提醒', description: '收藏此文章成功'})
+        })
+    }
     render() {
         let {getFieldProps} = this.props.form;
         const {comments} = this.state;
@@ -54,6 +65,8 @@ class CommonComments extends React.Component {
                             <Input type="textarea" placeholder="随便写" {...getFieldProps('remark',{initialValue: ''})} />
                         </FormItem>
                         <Button type="primary" htmlType="submit">提交评论</Button>
+                        &nbsp; &nbsp;
+                        <Button type="primary" htmlType="button" onClick={this.addUserCollection.bind(this)}>收藏该文章</Button>
                     </Form>
                 </Col>
             </Row>
