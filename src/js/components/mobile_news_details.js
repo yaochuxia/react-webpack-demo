@@ -29,10 +29,12 @@ export default class MobileNewsDetail extends React.Component{
             <div>
                 <MobileHeader></MobileHeader>
                 <Row>
-                    <Col span={24} className="container">
+                    <Col span={1}></Col>
+                    <Col span={22} className="container">
                         <div className="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}>
                         </div>
                     </Col>
+                    <Col span={1}></Col>
                 </Row>
                 <BackTop/>
                 <CommonComments uniquekey={this.props.params.uniquekey}/>

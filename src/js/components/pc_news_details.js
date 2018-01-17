@@ -41,9 +41,10 @@ export default class MobileNewsDetail extends React.Component{
                     </Col>
                     <Col span={1}></Col>
                 </Row>
-                <BackTop/>
                 <CommonComments uniquekey={this.props.params.uniquekey}/>
                 <PCFooter></PCFooter>
+                <BackTop/>
+
             </div>
         )
     }
