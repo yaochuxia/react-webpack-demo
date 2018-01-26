@@ -18,11 +18,11 @@ export default class PCNewsImageBlock extends React.Component{
     render(){
         const styleImage = {
             display: 'blcok',
-            width: this.props.imageWidth,
+            width: '104px',
             height: "90px"
         };
         const styleH3 = {
-            width: this.props.imageWidth,
+            width: '104px',
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
