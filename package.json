@@ -8,6 +8,9 @@
     "demo",
     "webpack"
   ],
+  "scripts": {
+    "start": "webpack-dev-server --env development"
+  },
   "author": "yaochuxia",
   "license": "MIT",
   "dependencies": {
