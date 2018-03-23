@@ -55,7 +55,7 @@ module:{
 
   
 ### webpack2 的文件压缩
- 自动检查件优化性能  
+ 自动检查文件优化性能  
  ```js
  performance: {
     hints: 'warning', // 'error'
@@ -64,7 +64,7 @@ module:{
 }
  ```
 
-###  Webpack2 中分离打包项代码与组件代码
+### Webpack2 中分离打包项代码与组件代码
 ```js
 entry: {
     app: PATHS.app,
