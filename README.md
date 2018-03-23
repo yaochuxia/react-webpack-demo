@@ -55,7 +55,7 @@ module:{
 
   
 ### webpack2 的文件压缩
- 动检查件优化性能  
+ 自动检查件优化性能  
  ```js
  performance: {
     hints: 'warning', // 'error'
