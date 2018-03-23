@@ -59,8 +59,9 @@ ul,li{
     list-style: none;
 }
 .topNewsList{
-    width: 370px;
-    float:left;
+    float: left;
+    text-align: left;
+    font-size: 14px;
     margin-right: 15px;
 }
 .imageblock {
@@ -75,4 +76,6 @@ ul,li{
     color: #999;
 }
 
-
+.mb15{margin-bottom: 15px;}
+.clear{clear:both;}
+em{font-style:normal;}

@@ -17,18 +17,23 @@ export default class PCNewsImageBlock extends React.Component{
     };
     render(){
         const styleImage = {
-            display: 'blcok',
-            width: '104px',
+            display: "block",
+            width: this.props.imageWidth,
             height: "90px"
         };
         const styleH3 = {
-            width: '104px',
+            width: this.props.imageWidth,
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis"
+        };
+        const styleP = {
+            width: this.props.imageWidth,
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
             marginBottom: 0,
-            fontSize: '14px'
-        };
+        }
         const {news} = this.state;
         const newsList = news.length
             ? news.map((newsItem, index) => (
@@ -39,7 +44,7 @@ export default class PCNewsImageBlock extends React.Component{
                         </div>
                         <div className="custom-card">
                             <h3 style={styleH3}>{newsItem.title}</h3>
-                            <p>{newsItem.author_name}</p>
+                            <p style={styleP}>{newsItem.author_name}</p>
                         </div>
                     </Link>
                 </div>
