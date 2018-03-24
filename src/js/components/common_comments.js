@@ -58,7 +58,8 @@ class CommonComments extends React.Component {
         '没有加载到任何评论';
         return (
             <Row>
-                <Col span={24}>
+            <Col span={1}></Col>
+                <Col span={22}>
                     {commnetList}
                     <Form onSubmit={this.handleSubmit.bind(this)}>
                         <FormItem label="您的评论">
@@ -69,6 +70,7 @@ class CommonComments extends React.Component {
                         <Button type="primary" htmlType="button" onClick={this.addUserCollection.bind(this)}>收藏该文章</Button>
                     </Form>
                 </Col>
+                <Col span={1}></Col>
             </Row>
         );
     };

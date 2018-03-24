@@ -4,7 +4,7 @@ const FormItem = Form.Item;
 const SubMenu = Menu.SubMenu;
 const TabPane = Tabs.TabPane;
 const MenuItemGroup = Menu.ItemGroup;
-import {Router, Route, Link, browserHistory} from 'react-router'
+import {Link} from 'react-router-dom'
 
 class MobileHeader extends React.Component {
     constructor() {
@@ -81,7 +81,7 @@ class MobileHeader extends React.Component {
         return (
         <div id="mobileheader">
             <header>
-              <img src="./src/images/logo.png" alt="logo"/>
+              <img src="/src/images/logo.png" alt="logo"/>
               <span>ReactNews</span>
                         {userShow}
             </header>

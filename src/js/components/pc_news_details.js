@@ -17,7 +17,7 @@ export default class MobileNewsDetail extends React.Component{
         var myFetchOptions = {
             method: 'GET'
         };
-        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=" + this.props.params.uniquekey, myFetchOptions).then(response => response.json()).then(json => {
+        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=" + this.props.match.params.uniquekey, myFetchOptions).then(response => response.json()).then(json => {
             this.setState({newsItem: json});
             document.title = this.state.newsItem.title + " - React News | React 驱动的新闻平台";
         })
@@ -29,9 +29,9 @@ export default class MobileNewsDetail extends React.Component{
         return(
             <div>
                 <PCHeader></PCHeader>
-                <Row>
+                <Row className="container">
                     <Col span={1}></Col>
-                    <Col span={14} className="container">
+                    <Col span={14}>
                         <div className="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}>
                         </div>
                     </Col>
@@ -41,7 +41,7 @@ export default class MobileNewsDetail extends React.Component{
                     </Col>
                     <Col span={1}></Col>
                 </Row>
-                <CommonComments uniquekey={this.props.params.uniquekey}/>
+                <CommonComments uniquekey={this.props.match.params.uniquekey}/>
                 <PCFooter></PCFooter>
                 <BackTop/>
 
