@@ -39,12 +39,12 @@ export default class PCNewsContainer extends React.Component{
                             <div className="clear"></div>
                         </div>
                         <div className="mb15">
-                            <PCNewsImageBlock count={3} type="guoji" width="100%" cartTitle="国际头条" imageWidth="112px"/>                   
-                            <PCNewsImageBlock count={3} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="132px"/>
-                            <PCNewsImageBlock count={3} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="132px"/>
+                            <PCNewsImageBlock count={3} type="guoji" width="100%" cartTitle="国际头条" imageWidth="105px"/>                   
+                            <PCNewsImageBlock count={3} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="105px"/>
+                            <PCNewsImageBlock count={3} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="105px"/>
                             <div className="clear"></div>
                         </div>
-                        <PCNewsImageBlock count={7} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="132px"/>
+                        <PCNewsImageBlock count={9} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="112px"/>
 
                     </Col>
                     <Col span={1}></Col>
