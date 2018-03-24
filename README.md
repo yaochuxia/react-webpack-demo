@@ -50,7 +50,7 @@ npm 项目初始化 `npm init`
 </BrowserRouter>
 ```
 ##### 获取路由
-构建网站所需要的所有必须组件（<BrowserRouter>, <Route>, 以及 <Link>）。当然，还有一些我们没有涉及的组件。所幸React Router拥有优质的[文档]（https://reacttraining.com/react-router/web/guides/quick-start），你可以查看并从中了解更多的信息。文档也提供一系列的例子与源代码。
+构建网站所需要的所有必须组件（<BrowserRouter>, <Route>, 以及 <Link>）。当然，还有一些我们没有涉及的组件。所幸React Router拥有优质的[文档](https://reacttraining.com/react-router/web/guides/quick-start)，你可以查看并从中了解更多的信息。文档也提供一系列的例子与源代码。
  
 ##### 嵌套路由
 运动员路由/roster/:number并未包含在上述<Switch>中。它由<Roster>组件负责在路径包含'/roster'的情形下进行渲染.
