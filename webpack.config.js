@@ -5,23 +5,25 @@ module.exports = {
     devServer:{
         historyApiFallback: true,
     },
+    // 应用入口
     entry: [
         'webpack/hot/dev-server',
         'webpack-dev-server/client?http://localhost:8080',
-        './src/js/root.js'
+        './src/js/root.js' //root.js作为入口文件
     ],
     output: {
         filename: 'bundle.js',
-        publicPath: '/src/'
+        path: path.join(__dirname, '../dist'), // 打包好之后的输出路径
+        publicPath: '/src/' // 静态资源文件引用时的路径（加在引用静态资源前面的）
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         loaders: [{
-                test: /\.jsx?$/,
+                test: /\.jsx?$/, //使用loader的目标文件。这里是.jsx
                 //loaders: ['babel-loader?presets[]=es2015&presets[]=react'],
-                exclude: /(node_modules)/,
+                exclude: /(node_modules)/, // 由于node_modules都是编译过的文件，这里我们不让babel去处理其下面的js文件
                 loader: 'babel-loader',
                 include: path.join(__dirname, '.'),
                 query: {
