@@ -36,8 +36,8 @@ export default class MobileNewsDetail extends React.Component{
                         </div>
                     </Col>
                     <Col span={8}>
-                        <PCNewsImageBlock count={6} type="guoji" width="370px" cartTitle="国际头条" imageWidth="112px"/>                   
-                        <PCNewsImageBlock count={6} type="yule" width="370px" cartTitle="娱乐头条" imageWidth="112px"/> 
+                        <PCNewsImageBlock count={6} type="guoji" width="450px" cartTitle="国际头条" imageWidth="122px"/>                   
+                        <PCNewsImageBlock count={6} type="yule" width="450px" cartTitle="娱乐头条" imageWidth="122px"/> 
                     </Col>
                     <Col span={1}></Col>
                 </Row>
