@@ -55,7 +55,7 @@ export default class PCUserCenter extends React.Component{
         const {usercollection,usercomments} = this.state;
         const usercollectionList = usercollection.length ?
         usercollection.map((ucs,index)=>(
-                <Card key={index} title={ucs.uniquekey} extra={<a target="_blank" href={`/#/details/${ucs.uniquekey}`}>查看</a>}>
+                <Card key={index} title={ucs.uniquekey} extra={<a target="_blank" href={`/details/${ucs.uniquekey}`}>查看</a>}>
                     <p>{ucs.Title}</p>
                 </Card>
         ))
@@ -63,7 +63,7 @@ export default class PCUserCenter extends React.Component{
 
         const usercommentsList = usercomments.length ?
         usercomments.map((comment,index)=>(
-                <Card key={index} title={`您于${comment.datetime} 评论了文章 ${comment.uniquekey}`} extra={<a target="_blank" href={`/#/details/${comment.uniquekey}`}>查看</a>}>
+                <Card key={index} title={`您于${comment.datetime} 评论了文章 ${comment.uniquekey}`} extra={<a target="_blank" href={`/details/${comment.uniquekey}`}>查看</a>}>
                     <p>{comment.Title}</p>
                 </Card>
         ))

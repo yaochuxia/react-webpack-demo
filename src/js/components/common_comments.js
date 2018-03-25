@@ -4,7 +4,7 @@ const FormItem = Form.Item;
 const SubMenu = Menu.SubMenu;
 const TabPane = Tabs.TabPane;
 const MenuItemGroup = Menu.ItemGroup;
-import {Router, Route, Link, browserHistory} from 'react-router'
+import {Router, Route, Link, browserHistory} from 'react-router-dom'
 
 class CommonComments extends React.Component {
     constructor() {
